@@ -1,0 +1,13 @@
+---
+- name: Task to install Jenkins
+  apt:
+    name: jenkins
+    state: present
+
+
+- name: Enable and start jenkins
+  systemd:
+    name: jenkins
+    enabled: yes
+    state: started
+  notify: Restart Jenkins

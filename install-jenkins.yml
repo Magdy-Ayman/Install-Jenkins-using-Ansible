@@ -1,0 +1,9 @@
+---
+- name: install jenkins 
+  hosts: techteam 
+  become: yes 
+
+  roles:
+    - install_java
+    - install_jenkins_repo
+    - install_jenkins
